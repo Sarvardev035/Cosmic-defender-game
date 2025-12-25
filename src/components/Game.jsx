@@ -97,7 +97,6 @@ export default function Game({ onDistance, onHealth, onGameOver, onDamage }) {
           scrollSpeed={scrollSpeed.current}
         />
       ))}
-      <TouchControls onTarget={(target) => Object.assign(touchTarget.current, target)} />
     </>
   )
 }
