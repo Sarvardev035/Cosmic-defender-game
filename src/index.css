@@ -1,0 +1,145 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000814;
+  color: #00d9ff;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00d9ff;
+  text-shadow: 0 0 10px #0099cc;
+  z-index: 10;
+}
+
+.hud-item {
+  background: rgba(0, 10, 20, 0.7);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #0099cc;
+}
+
+.game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.modal {
+  text-align: center;
+  background: rgba(0, 10, 20, 0.95);
+  padding: 40px;
+  border-radius: 16px;
+  border: 2px solid #00d9ff;
+  box-shadow: 0 0 30px #0099cc;
+  max-width: 500px;
+}
+
+.modal h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #0099cc;
+}
+
+.modal p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #00d9ff;
+  line-height: 1.6;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 12px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #00d9ff, #0099cc);
+  color: #000814;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+.modal button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.8);
+}
+
+.modal button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .hud {
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .hud-item {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .modal {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .modal h1 {
+    font-size: 36px;
+  }
+
+  .modal p {
+    font-size: 16px;
+  }
+
+  .modal button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}
