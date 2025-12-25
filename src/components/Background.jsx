@@ -1,9 +1,10 @@
-import React, { useFrame } from '@react-three/fiber'
+import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 import { Stars } from '@react-three/drei'
 
 export default function Background({ scrollSpeed }) {
-  const group1 = React.useRef()
-  const group2 = React.useRef()
+  const group1 = useRef()
+  const group2 = useRef()
 
   useFrame(() => {
     if (!group1.current || !group2.current) return

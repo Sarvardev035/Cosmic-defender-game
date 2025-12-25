@@ -1,7 +1,8 @@
-import React, { useFrame } from '@react-three/fiber'
+import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
 
 export default function Obstacle({ position, type, scrollSpeed }) {
-  const meshRef = React.useRef()
+  const meshRef = useRef()
 
   useFrame(() => {
     if (meshRef.current) {
